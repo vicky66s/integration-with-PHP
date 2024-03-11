@@ -1,0 +1,32 @@
+<?php
+
+function integral($func, $a, $b, $n) {
+    // Calculate the width of each subinterval
+    $dx = ($b - $a) / $n;
+    $sum = 0.0;
+    
+    // Iterate through each subinterval and calculate the area
+    for ($i = 0; $i < $n; $i++) {
+        $x_left = $a + $i * $dx;
+        $x_right = $a + ($i + 1) * $dx;
+        $sum += ($func($x_left) + $func($x_right)) / 2.0 * $dx;
+    }
+    
+    return $sum;
+}
+
+function f($x) {
+    // A simple function for testing, e.g., x^2
+    return $x * $x;
+}
+
+// Take inputs from the user
+$a = floatval(readline("Enter the lower limit of integration: "));
+$b = floatval(readline("Enter the upper limit of integration: "));
+$n = intval(readline("Enter the number of subintervals: "));
+
+// Calculate the integral and print the result
+$result = integral("f", $a, $b, $n);
+echo "The integral of the function is approximately: $result\n";
+
+?>
