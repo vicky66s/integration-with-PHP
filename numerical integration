@@ -1,7 +1,7 @@
 <?php
 
 function integral($func, $a, $b, $n) {
-    // Calculate the width of each subinterval
+    // Calculate the width of each subinterval.0020
     $dx = ($b - $a) / $n;
     $sum = 0.0;
     
