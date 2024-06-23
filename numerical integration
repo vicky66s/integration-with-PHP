@@ -5,7 +5,7 @@ function integral($func, $a, $b, $n) {
     $dx = ($b - $a) / $n;
     $sum = 0.0;
     
-    // Iterate through each subinterval and calculate the area
+    // Iterate through each subinterval and calculate the area.001
     for ($i = 0; $i < $n; $i++) {
         $x_left = $a + $i * $dx;
         $x_right = $a + ($i + 1) * $dx;
