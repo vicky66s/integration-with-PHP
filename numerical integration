@@ -1,10 +1,11 @@
+// 000000000000000000
 <?php
 
 function integral($func, $a, $b, $n) {
     // Calculate the width of each subinterval
     $sum = 0.0;
     
-    // Iterate through each subinterval and calculate the area000000000000000000
+    // Iterate through each subinterval and calculate the area
     for ($i = 0; $i < $n; $i++) {
         $x_left = $a + $i * $dx;
         $x_right = $a + ($i + 1) * $dx;
