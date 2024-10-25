@@ -1,4 +1,4 @@
-// 000000000000000000
+// 01
 <?php
 
 function integral($func, $a, $b, $n) {
